@@ -7,7 +7,9 @@ module.exports = {
     path: path.resolve(__dirname, "public"),
     filename: "bundle.js"
   },
-  devServer: { inline: true},
+  devServer: { inline: true, stats: {
+    hash: false, version: false, timings: false, assets: false, chunks: false
+  }},
   module: {
     rules: [
       {
