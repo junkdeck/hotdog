@@ -1,1 +1,5 @@
-console.log("hey y'all");
+import {h, render} from 'preact'
+
+import App from './App'
+
+render(<App />, document.body)
