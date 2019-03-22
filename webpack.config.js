@@ -1,15 +1,28 @@
-const path = require("path")
+const path = require('path')
 
 module.exports = {
+  resolve: {
+    alias: {
+      react: 'preact-compat',
+      'react-dom': 'preact-compat',
+    },
+  },
   mode: 'development',
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, "public"),
-    filename: "bundle.js"
+    path: path.resolve(__dirname, 'public'),
+    filename: 'bundle.js',
   },
-  devServer: { inline: true, stats: {
-    hash: false, version: false, timings: false, assets: false, chunks: false
-  }},
+  devServer: {
+    inline: true,
+    stats: {
+      hash: false,
+      version: false,
+      timings: false,
+      assets: false,
+      chunks: false,
+    },
+  },
   module: {
     rules: [
       {
@@ -18,10 +31,10 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ["@babel/preset-env"]
-          }
-        }
-      }
-    ]
-  }
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+    ],
+  },
 }
