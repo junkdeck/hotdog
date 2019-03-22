@@ -5,10 +5,13 @@
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
     "@babel/preset-env": "^7.4.2",
     "babel-cli": "^6.26.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-react-jsx": "^6.24.1",
+    "preact": "^8.4.2",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
@@ -16,6 +19,6 @@
   "scripts": {
     "watch": "webpack --watch",
     "build": "webpack --config webpack.config.js",
-    "start": "webpack --watch & webpack-dev-server"
+    "start": "webpack --watch & webpack-dev-server --content-base public/ --open"
   }
 }
